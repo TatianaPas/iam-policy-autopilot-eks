@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myapp2-rs
+spec:
+  replicas: 3
+  selector: 
+    matchLabels: 
+      app: myapp2
+  template:
+    metadata:
+      name: myapp2-pod
+      labels:
+        app: myapp2
+        tier: frontend
+    spec:
+      containers:
+        - name: myapp2
+          image: tatianapas1/iam-autopilot-nginx:v1
+          ports:
+            - containerPort: 80
