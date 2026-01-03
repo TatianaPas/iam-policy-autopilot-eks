@@ -4,6 +4,7 @@ metadata:
   name: user-management-service
   labels:
     app: user-management-restapp
+  namespace: dev3
 spec:
   type: NodePort
   selector: 

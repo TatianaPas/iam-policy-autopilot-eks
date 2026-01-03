@@ -4,6 +4,7 @@ metadata:
   name: user-management-microservice
   labels: 
     app: user-management-restapp
+  namespace: dev3
 spec:
   replicas: 1
   selector: 
@@ -50,11 +51,4 @@ spec:
               path: /usermgmt/health-status
               port: 8095
             initialDelaySeconds: 60
-            periodSeconds: 10
-          resources:
-            requests:
-              memory: "128Mi"
-              cpu: "500m" 
-            limits:
-              memory: "512Mi"   
-              cpu: "1000m"        
+            periodSeconds: 10      
